@@ -1,0 +1,12 @@
+{
+  "name": "canjs-hello-world",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rxaviers/canjs-hello-world"
+  },
+  "dependencies": {
+    "bootstrap": "~2.3.0",
+    "canjs": "~1.1.0"
+  }
+}
