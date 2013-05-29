@@ -29,6 +29,15 @@ var cssFiles = [
 
 grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
+  jshint: {
+    options: {
+      jshintrc: ".jshintrc"
+    },
+    app: jsFiles
+  },
+  csslint: {
+    app: cssFiles
+  },
   uglify: {
     app: {
       src: jsFiles,
@@ -47,12 +56,16 @@ grunt.initConfig({
   }
 });
 
+grunt.loadNpmTasks("grunt-contrib-csslint");
 grunt.loadNpmTasks("grunt-contrib-cssmin");
+grunt.loadNpmTasks("grunt-contrib-jshint");
 grunt.loadNpmTasks("grunt-contrib-uglify");
 
 grunt.registerTask("dist", function() {
   grunt.file.mkdir("dist");
 });
+
+grunt.registerTask("lint", ["jshint", "csslint"]);
 
 grunt.registerTask("default", [
   /* Setup */
