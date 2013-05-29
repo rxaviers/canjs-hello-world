@@ -1,5 +1,5 @@
 var CanTabs = can.Control({
-  init: function(el) {
+  init: function() {
     var self = this;
 
     // activate the first tab
