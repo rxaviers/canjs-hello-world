@@ -16,6 +16,7 @@ Install external dependencies.
 Install grunt
 
     $ npm install
+    $ npm install -g grunt-cli   # if necessary. You may need root privileges.
 
 ### Development mode
 
